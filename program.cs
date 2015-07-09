@@ -10,14 +10,40 @@ namespace Welcome1
     {
         enum Days { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Sartuday };
 
+        #region struct
+        struct Coffee
+        {
+            public string Name { get; set; }
+            public string Bean { get; set; }
+            public string CountyOfOrigin { get; set; }
+            public int Strength { get; set; }
+            public string grind;
+
+        }
+
+        #endregion
         static void Main(string[] args)
         {
+            #region using a struct
+
+            Coffee coffee1 = new Coffee();
+            coffee1.Name = "Fourth Coffee Quencher";
+            coffee1.CountyOfOrigin = "Indonesia";
+            coffee1.Strength = 3;
+            coffee1.grind = "fine";
+            Console.WriteLine("Name: {0}", coffee1.Name);
+            Console.WriteLine("Country of Origin: {0}", coffee1.CountyOfOrigin);
+            Console.WriteLine("Strength: {0}", coffee1.Strength);
+            Console.WriteLine("The grind is: {0}", coffee1.grind);
+
+            #endregion
+
             #region enum
 
-            int x = (int)Days.Sunday;
-            int y = (int)Days.Friday;
-            Console.WriteLine("Sun = {0}", x);
-            Console.WriteLine("Fri = {0}", y);
+            //int x = (int)Days.Sunday;
+            //int y = (int)Days.Friday;
+            //Console.WriteLine("Sun = {0}", x);
+            //Console.WriteLine("Fri = {0}", y);
 
             #endregion
 
