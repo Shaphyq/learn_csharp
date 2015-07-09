@@ -155,10 +155,22 @@ namespace Welcome1
             //Area(length: 30, width: 50);
 
             //Using optional parameters
-            OptionalParams(10, 20);
+            //OptionalParams(10, 20);
 
             #endregion
 
+            double a = 98, b = 0;
+            double result = 0;
+
+            try
+            {
+                result = SafeDivision(a, b);
+                Console.WriteLine("{0} divided by {1} = {2}", a, b, result);
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine("Attempted divide by zero.");
+            }
             #region Exception Handling
             #endregion
         }
@@ -204,6 +216,13 @@ namespace Welcome1
         static void OptionalParams(int one, int two, string s = "default text")
         {
             Console.WriteLine("{0}, {1}, {2}", one, two, s);
+        }
+
+        static double SafeDivision(double x, double y)
+        {
+            if (y == 0)
+                throw new System.DivideByZeroException();
+            return x / y;
         }
         #endregion
     }
