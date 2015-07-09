@@ -159,19 +159,45 @@ namespace Welcome1
 
             #endregion
 
-            double a = 98, b = 0;
-            double result = 0;
-
-            try
-            {
-                result = SafeDivision(a, b);
-                Console.WriteLine("{0} divided by {1} = {2}", a, b, result);
-            }
-            catch (DivideByZeroException e)
-            {
-                Console.WriteLine("Attempted divide by zero.");
-            }
             #region Exception Handling
+
+            //double a = 98, b = 0;
+            //double result = 0;
+
+            //try
+            //{
+            //    result = SafeDivision(a, b);
+            //    Console.WriteLine("{0} divided by {1} = {2}", a, b, result);
+            //}
+            //catch (DivideByZeroException e)
+            //{
+            //    Console.WriteLine("Attempted divide by zero.");
+            //}
+            #endregion
+
+            #region Arrays
+            ////Integer array of size 10
+            //int[] intArray = new int[10];
+
+            ////integer array of size 5 by initializing
+            //int[] newArray = { 1, 2, 3, 4, 5 };
+
+            //for(int counter = 0; counter < newArray.Length; counter++)
+            //{
+            //    Console.WriteLine(newArray[counter]);
+            //}
+
+            //create 2 dimensional array and iterate over it.
+            int[,] twoDArray = { { 3, 2 }, { 4, 5 }, { 5, 6 } };
+
+            for (int x = 0; x < twoDArray.GetLength(0); x++)
+            {
+                for (int y = 0; y < twoDArray.GetLength(1); y++)
+                {
+                    int value = twoDArray[x, y];
+                    Console.WriteLine(value.ToString());
+                }
+            }
             #endregion
         }
 
