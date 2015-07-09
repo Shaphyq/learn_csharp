@@ -8,8 +8,19 @@ namespace Welcome1
 {
     class Program
     {
+        enum Days { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Sartuday };
+
         static void Main(string[] args)
         {
+            #region enum
+
+            int x = (int)Days.Sunday;
+            int y = (int)Days.Friday;
+            Console.WriteLine("Sun = {0}", x);
+            Console.WriteLine("Fri = {0}", y);
+
+            #endregion
+
             #region Variables, Operators & Expressions
 
             //int condition1;
@@ -188,18 +199,20 @@ namespace Welcome1
             //}
 
             //create 2 dimensional array and iterate over it.
-            int[,] twoDArray = { { 3, 2 }, { 4, 5 }, { 5, 6 } };
+            //int[,] twoDArray = { { 3, 2 }, { 4, 5 }, { 5, 6 } };
 
-            for (int x = 0; x < twoDArray.GetLength(0); x++)
-            {
-                for (int y = 0; y < twoDArray.GetLength(1); y++)
-                {
-                    int value = twoDArray[x, y];
-                    Console.WriteLine(value.ToString());
-                }
-            }
+            //for (int x = 0; x < twoDArray.GetLength(0); x++)
+            //{
+            //    for (int y = 0; y < twoDArray.GetLength(1); y++)
+            //    {
+            //        int value = twoDArray[x, y];
+            //        Console.WriteLine(value.ToString());
+            //    }
+            //}
             #endregion
         }
+
+        #region functions
 
         //static long Factorial(int n)
         //{
@@ -210,6 +223,7 @@ namespace Welcome1
 
         //    return n * Factorial(n - 1);
         //}
+        #endregion
 
         #region Called Methods
         static void PrintSomething()
